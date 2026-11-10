@@ -1,0 +1,557 @@
+/* =================================
+   SAVANNA BREW CAFE WEBSITE
+   Main External Stylesheet
+================================= */
+
+/* 1. COLOUR VARIABLES */
+
+:root {
+    --primary: #6F4E37;
+    --secondary: #F5E9DA;
+    --accent: #D9822B;
+    --dark: #2B1B12;
+    --white: #FFFFFF;
+}
+
+/* 2. GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+/* 3. HEADER AND NAVIGATION */
+
+header {
+    background-color: var(--secondary);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* 4. HOME PAGE HERO */
+
+.hero {
+    min-height: 550px;
+    background:
+        linear-gradient(
+            rgba(43, 27, 18, 0.75),
+            rgba(43, 27, 18, 0.55)
+        ),
+        url("../images/hero.svg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--white);
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.tagline {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* 5. BUTTONS */
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--dark);
+    padding: 12px 25px;
+    margin: 10px 8px 10px 0;
+    border-radius: 25px;
+    border: 2px solid var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+/* 6. SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: var(--primary);
+    font-size: 32px;
+}
+
+/* 7. HOME PAGE CARDS */
+
+.cards {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--secondary);
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 15px;
+    color: var(--primary);
+}
+
+.card p {
+    padding: 0 15px;
+}
+
+.card strong {
+    color: var(--accent);
+}
+
+/* 8. CALL TO ACTION */
+
+.cta {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.cta h2 {
+    font-size: 32px;
+}
+
+/* 9. PAGE BANNER */
+
+.page-banner {
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.page-banner h1 {
+    color: var(--primary);
+    font-size: 40px;
+}
+
+/* 10. ABOUT PAGE */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.owner-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.about-layout h2 {
+    color: var(--primary);
+}
+
+.values-list {
+    padding-left: 25px;
+}
+
+.values-list li {
+    margin-bottom: 12px;
+}
+
+blockquote {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 5px solid var(--accent);
+    background-color: var(--secondary);
+    font-style: italic;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* 11. MENU TABLES */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--secondary);
+}
+
+tbody tr:hover {
+    background-color: #f2d4b5;
+}
+
+.price {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* 12. GALLERY GRID */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid figure {
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--secondary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-grid figure:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-grid figcaption {
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* 13. CONTACT AND RESERVATION */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.reservation form {
+    background-color: var(--secondary);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.reservation h2,
+.contact-info h2 {
+    color: var(--primary);
+}
+
+.reservation label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.reservation input,
+.reservation select,
+.reservation textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bca995;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.reservation input:focus,
+.reservation select:focus,
+.reservation textarea:focus {
+    border-color: var(--accent);
+}
+
+.reservation fieldset {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+}
+
+.reservation legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.reservation fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 15px;
+}
+
+.reservation fieldset input {
+    width: auto;
+}
+
+.reservation button {
+    margin-top: 20px;
+}
+
+.contact-info {
+    background-color: var(--secondary);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.hours-table th,
+.hours-table td {
+    padding: 10px 5px;
+}
+
+/* 14. FOOTER */
+
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 40px 0 15px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+footer h3 {
+    color: var(--accent);
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #695344;
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+/* 15. TABLET RESPONSIVENESS */
+
+@media screen and (max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 16. MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 40px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .page-banner h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+}
